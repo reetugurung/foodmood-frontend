@@ -21,7 +21,7 @@ export default function MenuPage() {
       try {
         setIsLoading(true);
   
-        const response = await fetch('https://your-foodmood.onrender.com/api/menu');
+        const response = await fetch('https://foodmood-oqel.onrender.com/api/menu');
         
         if (!response.ok) {
           throw new Error(`Server responded with status: ${response.status}`);

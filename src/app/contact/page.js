@@ -26,7 +26,7 @@ export default function ContactPage() {
     setStatus({ loading: true, success: false, error: null });
 
     try {
-      const response = await fetch('https://your-foodmood.onrender.com/api', {
+      const response = await fetch('https://foodmood-oqel.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

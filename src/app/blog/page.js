@@ -11,7 +11,7 @@ export default function BlogPage() {
     async function fetchBlogs() {
       try {
         setIsLoading(true);
-        const response = await fetch('https://your-foodmood.onrender.com/api');
+        const response = await fetch('https://foodmood-oqel.onrender.com/api');
         
         if (!response.ok) {
           throw new Error(`Failed to load articles: ${response.status}`);

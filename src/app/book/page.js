@@ -29,7 +29,7 @@ export default function BookTablePage() {
     setStatus({ loading: true, success: false, error: null });
 
     try {
-      const response = await fetch('https://your-foodmood.onrender.com/api/reservations', {
+      const response = await fetch('https://foodmood-oqel.onrender.com/apireservations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
