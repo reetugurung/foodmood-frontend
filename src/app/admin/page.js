@@ -1,12 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-const API_BASE_URL = 'https://your-foodmood-backend.onrender.com/api';
-setError(null);
-const [resResponse, msgResponse] = await Promise.all([
-  fetch(`${API_BASE_URL}/reservations`),
-  fetch(`${API_BASE_URL}/contact`)
-]);
+const API_BASE_URL = 'https://your-foodmood.onrender.com/api';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('reservations'); 
@@ -14,14 +9,15 @@ export default function AdminDashboard() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     async function fetchAdminData() {
       try {
         setLoading(true);
         setError(null);
         const [resResponse, msgResponse] = await Promise.all([
-          fetch('https://your-foodmood.onrender.com/api/reservations'),
-          fetch('https://your-foodmood.onrender.com/api/contact')
+          fetch(`${API_BASE_URL}/reservations`),
+          fetch(`${API_BASE_URL}/contact`)
         ]);
 
         if (!resResponse.ok || !msgResponse.ok) {
@@ -153,10 +149,8 @@ export default function AdminDashboard() {
                 )}
               </div>
             )}
-
           </div>
         )}
-
       </div>
     </div>
   );
