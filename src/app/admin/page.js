@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-const API_BASE_URL = 'https://your-foodmood.onrender.com/api';
+const API_BASE_URL = 'https://foodmood-oqel.onrender.com/api';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('reservations'); 
